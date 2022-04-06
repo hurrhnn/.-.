@@ -6,7 +6,7 @@ What I tried on Apple Silicon Macs.
 * Build the wine source: `wine64` on Rosetta 2 only available.
   - aarch32 is not implemented on Apple Silicon.
   - Apple dropped support for 32-bit applications since macOS Catalina.
-  - It cannot run PE32(most of the installers, programs) windows executables since there is no WOW64 support.
+  - It could not run PE32(most of the installers, programs) windows executables since there is no WOW64 support.
 <br>
 
 * Use Crossover: worked via `wine32on64` on Rosetta 2, but It's LAME.
@@ -15,16 +15,16 @@ What I tried on Apple Silicon Macs.
 
 * [Port Crossover Wine to regular latest wine](https://github.com/CalicoCheese/wine-cx-port).
   - I succeeded in merging nearly 4000 files, but many errors occurred while building. (That was a reckless challenge ;) )
-  - need to check out the wine32on64 tricks more.
+  - Need to check out the wine32on64 tricks more.
 <br>
 
 * Running arm64 Linux machines on `VMware Fusion Tech Preview` and execute `wine`/`wine64` via qemu-userspace emulations.
-  - It cannot create a wine prefix. (crashed `wine`, cannot be executed anymore.)
+  - It could not create a wine prefix. (crashed `wine`, cannot be executed anymore.)
   - VirtualGL software accelerations. (VGL Transport with X11 Forwarding)
 <br>
 
 * Running arm64 Linux machines on `VMware Fusion Tech Preview` and execute `wine`/`wine64` via `box86`/`box64`.
-  - `box86` cannot be executed since there is no aarch32 support.
+  - `box86` could not be executed since there is no aarch32 support.
   - `wine`: there is no `wine` & WOW64 support because `box86` is missing.
   - `wine64`: runs perfectly via `box64`.
   - VirtualGL software accelerations. (VGL Transport with X11 Forwarding)
@@ -41,13 +41,13 @@ What I tried on Apple Silicon Macs.
 <br>
 
 * Running **x86_64** Linux machines on `UTM(qemu)` and execute `wine`/`wine64`.
-   - Extremely slow. (because there is no `hypervisor.framework` acceleration support on x86_64 machines.)
+   - Extremely slow. (because there is no `hypervisor.framework` acceleration support on x86_64 virtual machines.)
    - `wine`/`wine64` crashed. (The winedbg opens and it cannot create a wine prefix.)
    - VirtualGL software accelerations. (VGL Transport with X11 Forwarding)
 <br>
 
 * Running arm64 Linux machines on `qemu` [**with GPU acceleration**](https://gist.github.com/akihikodaki/87df4149e7ca87f18dc56807ec5a1bc5) and execute `wine`/`wine64`.
-   - I'm using M1 Pro, [there is have an issue](https://gist.github.com/akihikodaki/87df4149e7ca87f18dc56807ec5a1bc5?permalink_comment_id=4064827#gistcomment-4064827), so I used [patched akihikodaki's qemu](https://github.com/hurrhnn/qemu-m1-patch/commit/8be614e0bb870121ddfbe2620b3e2871e03bb817).
+   - I'm using M1 Pro, [there is have an issue](https://gist.github.com/akihikodaki/87df4149e7ca87f18dc56807ec5a1bc5?permalink_comment_id=4064827#gistcomment-4064827), so I used [patched akihikodaki's qemu](https://github.com/hurrhnn/qemu-hvf-patch/commit/8be614e0bb870121ddfbe2620b3e2871e03bb817).
    - As far as I know, there is no way to run `wine` normally with x86_64 emulation I think.
    - Hardware 3D accelerations. (Linux guest OS only.)
 <br>

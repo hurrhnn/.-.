@@ -10,7 +10,7 @@ What I tried on Apple Silicon Macs.
 <br>
 
 * Use Crossover: worked via `wine32on64` on Rosetta 2, but It's LAME.
-  - Currently, The latest Crossover is based on wine 6.0 sources. It's not horny.
+  - Currently, The latest Crossover is based on wine 6.0 sources.
 <br>
 
 * [Port Crossover Wine to regular latest wine](https://github.com/CalicoCheese/wine-cx-port).

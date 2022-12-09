@@ -60,7 +60,7 @@ What I tried on Apple Silicon Macs.
   - General 2D accelerations.
 <br>
 
-#### 2022/10
+#### 2022/12
 
 * Use Crossover: worked via `wine32on64` on Rosetta 2, but It's still unstable.
   - Currently, The latest Crossover is based on wine 7.7 sources.
@@ -69,7 +69,7 @@ What I tried on Apple Silicon Macs.
 * Running arm64 Linux machines on [`VMware Fusion Tech Preview 22H2`](https://blogs.vmware.com/teamfusion/2022/07/just-released-vmware-fusion-22h2-tech-preview.html) and execute `wine`/`wine64` via `box86`/`box64`.
   - It requires the **super latest** linux system (I usually use Fedora Rawhide(38) for this).
   - `box86` could not be executed since there is no aarch32 support.
-  - `wine`: there is no `wine` & WOW64 support because `box86` is missing.
+  - `wine`: there is no `wine` & WoW64 support because `box86` is missing.
   - `wine64`: runs perfectly via `box64` (not usually for games).
   -  Hardware 3D accelerations using vmwgfx.
 <br>
